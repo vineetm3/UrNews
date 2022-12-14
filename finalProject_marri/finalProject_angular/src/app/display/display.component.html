@@ -1,0 +1,46 @@
+<div *ngIf=flag>
+  <h4>Hi {{currUser()}}!</h4>
+  <h6 class="temp">Here are the top current trending headlines:</h6>
+</div>
+
+<div *ngIf=flag class="default-container">
+  <div *ngFor="let headline of headlines">
+    <mat-card class="default">
+      <img mat-card-image src = {{headline.urlToImage}}>
+      <mat-card-title>
+        {{headline.title}}
+      </mat-card-title>
+      <mat-card-content>
+        <div>
+          {{headline.description}}
+        </div>
+        <div>
+          <a href = {{headline.url}}>LEARN MORE</a>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div *ngIf=!flag>
+  <h4>Hi {{currUser()}}!</h4>
+  <h6>Here is your news about: {{preferences[0].query}}</h6>
+</div>
+<div class = 'news-card-container' *ngIf=!flag>
+  <div *ngFor="let data of datas">
+    <mat-card class="custom">
+      <img mat-card-image src = {{data.urlToImage}}>
+      <mat-card-title>
+        {{data.title}}
+      </mat-card-title>
+      <mat-card-content>
+        <div>
+          {{data.description}}
+        </div>
+        <div>
+          <a href = {{data.url}}>LEARN MORE</a>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

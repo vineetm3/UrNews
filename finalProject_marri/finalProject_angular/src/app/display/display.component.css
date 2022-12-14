@@ -1,0 +1,27 @@
+h4, h6{
+  text-align: center;
+}
+.news-card-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(305px, 1fr));
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+mat-card{
+  margin-left:25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.default-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(305px, 1fr));
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.temp{
+  text-align: center;
+}
