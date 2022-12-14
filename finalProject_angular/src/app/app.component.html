@@ -1,0 +1,10 @@
+<mat-toolbar *ngIf="isUser">
+  <igx-avatar [roundShape]="true" size="small" matTooltip={{currentUser.username}}>{{getNames()}}</igx-avatar>
+  <button mat-flat-button routerLink="/" color="warn">Home</button>
+  <button mat-flat-button routerLink="/personalize" color="warn">Personalize</button>
+  <button mat-flat-button routerLink="/display" color="warn">News Feed</button>
+  <button mat-flat-button routerLink="/admin" *ngIf="isAdmin" color="warn">Users</button>
+  <button  mat-flat-button (click)="logout()" color="warn">Logout </button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
